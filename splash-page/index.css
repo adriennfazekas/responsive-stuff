@@ -1,3 +1,6 @@
+* {
+    box-sizing: border-box;
+}
 body {
     margin: 0;
     font-family: 'Source Sans Pro', sans-serif;
@@ -21,6 +24,7 @@ h2 {
 .beta-text { 
     font-weight: 900;
     text-transform: uppercase;
+    padding-bottom: 1.5em;
 }
 
 .subheading {
@@ -28,6 +32,16 @@ h2 {
     font-weight: 900;
     margin-bottom: 0.5em;
     text-transform: uppercase;
+}
+.top-text {
+    font-size: 0.875rem;
+    font-weight: 900;
+    padding-top: 0.25em;
+    border-top: 5px solid;
+    text-transform: uppercase;
+    order: -1; /* kiemeljük az eddigi sorból és h1 fölé kerül */
+    margin: 0 auto;
+    width: 142px;
 }
 
 /* =================
@@ -38,11 +52,12 @@ h2 {
     display: flex;
     flex-direction: column;
     min-height: 250px;
-    justify-content: center;
+    justify-content: space-between;
     text-align: center;
-    padding: 2em 2em;
+    padding: 0 2em;
     color: #fff;
-    background-color: #9480e4;
+    background: #9480e4 url("intro-bg.png");
+    background-size: cover;
 }
 
 /* ====================
@@ -63,15 +78,62 @@ h2 {
     height: 120px;    
 }
 p {
-    align-self: flex-start;
     font-size: 1.125rem;
     line-height: 1.35;
+}
+
+.main-content p,
+form {
+    max-width: 450px;
 }
 
 /* =================
     Form
    ================= */
-   
+form {
+    width: 100%;
+}
+input, .btn {
+    font-family: inherit;
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+input {
+    margin-bottom: 1em;
+    padding: 0.5em;
+    border: solid 2px #d1d5db;
+    
+}
+input:hover {
+    background-color: #e6e8ec;
+    border-color: #8a71ec;
+}
+.btn {
+    
+    border: none;
+    padding: 1em 0;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+.btn-primary {
+    margin-top: 2em;
+    background-color: #8a71ec;
+    color: white;
+}
+
+.btn:hover {
+    background-color: #b7a7f6;
+}
+
+.fine-print {
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    color: #858585;
+}   
 
 /* =================
     Media queries 
