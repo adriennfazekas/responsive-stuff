@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+}
+
+html, 
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/*
+.flex-container {
+    display: flex;
+}
+*/
+
+.header {
+    grid-area: header;
+    display: flex;
+    background-color: aqua;
+    border: 2px solid peru;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr)  ;
+    grid-template-areas: 
+    "header header header"
+    "title title title"
+    "content content content";
+    grid-gap: 2em 1em;
+}
+
+.travel{
+    background-color: aquamarine;
+    border: 2px solid red;
+}
+
+.big {
+    grid-area: title;
+}
